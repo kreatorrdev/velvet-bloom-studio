@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#100f0e"/>
+  <circle cx="975" cy="315" r="310" fill="none" stroke="#9b7752" stroke-width="1" opacity=".4"/>
+  <circle cx="975" cy="315" r="265" fill="none" stroke="#9b7752" stroke-width="1" opacity=".3"/>
+  <path d="M975 430c-15-70-90-73-90-143 52 0 84 30 90 64 6-34 38-64 90-64 0 70-75 73-90 143Z M975 355c-45-27-45-72 0-127 45 55 45 100 0 127Z" fill="none" stroke="#c5a577" stroke-width="3" opacity=".8"/>
+  <text x="90" y="160" fill="#c5a577" font-family="Arial, sans-serif" font-size="17" letter-spacing="9">A MORE INTENTIONAL KIND OF BEAUTY</text>
+  <text x="80" y="340" fill="#f1e7dd" font-family="Georgia, serif" font-size="98">Velvet Bloom</text>
+  <text x="88" y="398" fill="#c5a577" font-family="Arial, sans-serif" font-size="20" letter-spacing="13">BEAUTY STUDIO</text>
+  <path d="M90 468h490" stroke="#c5a577" stroke-opacity=".35"/>
+  <text x="90" y="518" fill="#b4a79c" font-family="Georgia, serif" font-style="italic" font-size="32">Where beauty becomes a ritual.</text>
+</svg>
