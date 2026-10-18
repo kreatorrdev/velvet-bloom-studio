@@ -2,6 +2,8 @@
 
 A fictional beauty and wellness studio website. The English UI presents an original brand concept, illustrative GBP prices, sample guest reflections and a browser-only booking demonstration. It does not represent a real salon.
 
+Live demo: [velvet-bloom-studio.vercel.app](https://velvet-bloom-studio.vercel.app/).
+
 ## Run locally
 
 From this folder (beside `package.json`):
@@ -63,11 +65,11 @@ Standard scripts use Webpack because Turbopack path handling failed in the restr
 
 Fonts are local and do not require Google Fonts requests during build. The cached upright Cormorant face is included; italic text uses browser synthesis. Photography uses external Unsplash URLs for visual direction and needs internet access. Images do not depict a real Velvet Bloom location.
 
-## GitHub / Vercel preparation
+## GitHub / Vercel deployment
 
 The outer folder is the Git root on `main`. Its `.github/workflows/ci.yml` installs the lockfile, runs lint, builds and checks TypeScript on Node.js 24. Backups, QA output, `.env.local`, `node_modules`, `.next` and `.vercel` are ignored. `.env.example` is included.
 
-Source is saved in the private [kreatorrdev/velvet-bloom-studio repository](https://github.com/kreatorrdev/velvet-bloom-studio). Local main tracks origin/main and mirrors the same history. [GitHub Site checks](https://github.com/kreatorrdev/velvet-bloom-studio/actions/runs/39153440841) passed on Node.js 24. The connected GitHub app can publish changes; a future manual push/fetch from the local terminal requires refreshing its separate GitHub login. Vercel still requires sign-in/connection, so no public deployment is claimed.
+Source is saved in the private [kreatorrdev/velvet-bloom-studio repository](https://github.com/kreatorrdev/velvet-bloom-studio). Local main tracks origin/main and mirrors the same history. [GitHub Site checks](https://github.com/kreatorrdev/velvet-bloom-studio/actions/runs/39153440841) passed on Node.js 24. The connected GitHub app can publish changes; a future manual push/fetch from the local terminal requires refreshing its separate GitHub login. The [Vercel project](https://vercel.com/kreatorrdev/velvet-bloom-studio) is connected to GitHub main and its production deployment is Ready. Saving changes to main triggers another deployment.
 
 For a Vercel project using the outer repository:
 
@@ -92,7 +94,9 @@ Official references: [Next.js on Vercel](https://vercel.com/docs/frameworks/full
 
 On 18 October 2026, the portfolio revision passed lint, TypeScript and production build. Rendered HTML checks passed: one H1, unique IDs, valid internal anchors, image alt attributes, noindex and a 1200 × 630 PNG Open Graph image. Browser checks confirmed treatment selection, sample fill, preview feedback, clearing all fields and no horizontal overflow at 320, 375, 768 and 1440 px. The deferred portfolio link is absent from the interface.
 
-The earlier version also passed gallery keyboard/focus, mobile menu, FAQ, privacy and custom 404 checks; those behaviours are retained. This is not a complete screen-reader or physical-device audit. Remote CI has passed on Node.js 24. The eventual Vercel URL must be checked after Vercel sign-in and deployment.
+The earlier version also passed gallery keyboard/focus, mobile menu, FAQ, privacy and custom 404 checks; those behaviours are retained. This is not a complete screen-reader or physical-device audit. Remote CI has passed on Node.js 24.
+
+The public Vercel site was verified on 18 October 2026: homepage, privacy, robots, share image and icon returned 200; an unknown route returned 404. Canonical uses the live domain and the demo remains noindex. Images loaded, gallery and FAQ worked, sample fill/preview/reset passed, and the mobile menu opened and closed with Escape without horizontal overflow at 375 px.
 
 Project status and remaining work: `PROJECT_ROADMAP.md` (also in the outer Git root).
 

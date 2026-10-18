@@ -25,7 +25,7 @@ Rezervna kopija pre integracije: `work/backup-before-integration-20261018/` (ign
 | Formular | Isključivo lokalni demo: sample fill, validacija, preview i reset |
 | SEO | Metadata, canonical prema domenu, PNG OG 1200 × 630, SVG ikona, noindex |
 | Provere | ESLint, TypeScript, Next build, generisani HTML, Chrome browser |
-| Objava | Pripremljeni GitHub Actions i Vercel config, Node.js 24 za udaljene provere |
+| Objava | Privatni GitHub repo i javni Vercel demo; GitHub Actions provere na Node.js 24 |
 
 ## Status implementacije
 
@@ -70,21 +70,32 @@ Lokalne provere su pokrenute sa instaliranim Node.js 26.5.0. GitHub CI na Node.j
 | GitHub repozitorijum za projekat | KREIRAN I POPUNJEN — privatni https://github.com/kreatorrdev/velvet-bloom-studio |
 | Lokalni Git remote | POVEZAN — origin pokazuje na privatni GitHub repozitorijum |
 | Lokalna i udaljena istorija | SINHRONIZOVANO — main prati origin/main; izvorni fajlovi su na GitHub-u |
-| Vercel dodatak | Nije instaliran / povezivanje nije potvrđeno |
-| Vercel projekat i javni URL | Nisu kreirani; potrebna je Vercel prijava/povezivanje, zatim objava |
+| Vercel nalog i GitHub integracija | POVEZANO; potvrđen projekat kreatorrdev/velvet-bloom-studio i izvor main |
+| Vercel projekat i javni URL | OBJAVLJENO — https://velvet-bloom-studio.vercel.app/; Production Ready |
+| Vercel dodatak za ovaj razgovor | Nije instaliran; nije potreban za postojeću objavu i GitHub integraciju |
 
-GitHub konektor radi i izvorni fajlovi su poslati preko njega. Lokalna istorija je usklađena sa tačnim GitHub objektima bez prepisivanja radnih fajlova. Za budući ručni push/fetch iz VS Code terminala treba obnoviti lokalnu GitHub prijavu; ovo ne utiče na povezani konektor. Vercel u otvorenom pregledaču traži prijavu, a njegov dodatak još nije povezan. Status treba ponovo proveriti nakon korisničkog povezivanja.
+GitHub konektor radi i izvorni fajlovi su poslati preko njega. Lokalna istorija je usklađena sa tačnim GitHub objektima bez prepisivanja radnih fajlova. Za budući ručni push/fetch iz VS Code terminala treba obnoviti lokalnu GitHub prijavu; ovo ne utiče na povezani konektor. Vercel nalog u Chrome-u je prijavljen, a produkcioni projekat povezan je sa ovim repozitorijumom. Sačuvane promene na main grani pokreću narednu Vercel objavu.
+
+## Provera javnog sajta — 18. oktobar 2026.
+
+- https://velvet-bloom-studio.vercel.app/ vraća 200 i prikazuje portfolio demo.
+- Vercel prikazuje Production Ready, GitHub main i ispravan unutrašnji folder aplikacije.
+- /privacy, /robots.txt, /opengraph-image i /icon.svg vraćaju 200; nepostojeća stranica vraća 404.
+- Canonical koristi stvarni javni domen; noindex, nofollow ostaje nameran za demo.
+- Sve učitane fotografije prikazane su bez greške. Galerija se otvara i zatvara tasterom Escape; FAQ se otvara.
+- Demo fill, preview i clear rade i na javnom sajtu; nijedan unos se ne šalje ili rezerviše.
+- Mobilni meni se otvara i zatvara tasterom Escape; na 375 px nema horizontalnog prelivanja.
 
 ## Preostalo — redosled objave
 
 | Redosled | Zadatak | Status i uslov završetka |
 | --- | --- | --- |
-| 1 | Završiti Vercel povezivanje | ČEKA KORISNIČKO POVEZIVANJE; potvrditi pristup nalogu |
+| 1 | Završiti Vercel povezivanje | ZAVRŠENO; nalog i produkcioni projekat dostupni |
 | 2 | Povezati GitHub repozitorijum | ZAVRŠENO; privatni kreatorrdev/velvet-bloom-studio, 44 izvorna fajla, bez tajni i rezervnih kopija |
 | 3 | Sačuvati verziju i proveriti je na GitHub-u | ZAVRŠENO; izvorni kod sačuvan i Site checks prošao na Node.js 24 |
-| 4 | Vercel preview | ČEKA POVEZIVANJE; za spoljašnji repo Root Directory je velvet-bloom-studio; npm ci i npm run build |
-| 5 | Proveriti objavljeni URL | ZA POSLE DEPLOY-A; slike, menu, gallery, FAQ, demo fill/preview/reset, privacy i 404 |
-| 6 | Podeliti javni demo URL | ZA POSLE PROVERE; dovoljan je Vercel poddomen, sopstveni domen je opcioni |
+| 4 | Vercel objava | ZAVRŠENO; Production Ready; aplikacija u velvet-bloom-studio folderu |
+| 5 | Proveriti objavljeni URL | ZAVRŠENO; slike, mobilni meni, galerija, FAQ, demo fill/preview/reset, privacy i 404 |
+| 6 | Podeliti javni demo URL | ZAVRŠENO; https://velvet-bloom-studio.vercel.app/; sopstveni domen je opcioni |
 | Kasnije | Napraviti lični portfolio i dodati njegov link | NAMERNO ODLOŽENO; ne blokira demo objavu |
 
 Za ovaj portfolio demo **ne čekamo** podatke stvarnog salona, stvarne recenzije ili booking servis. Pravo zakazivanje zahteva novu, zasebnu odluku i implementaciju.

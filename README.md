@@ -4,7 +4,7 @@ Fictional beauty and wellness studio portfolio demo, built with Next.js 16, Reac
 
 Source repository: [kreatorrdev/velvet-bloom-studio](https://github.com/kreatorrdev/velvet-bloom-studio) (private).
 [Site checks passed on Node.js 24](https://github.com/kreatorrdev/velvet-bloom-studio/actions/runs/39153440841).
-Vercel publication awaits account sign-in/connection. The designer portfolio link is intentionally deferred.
+Live demo: [Velvet Bloom Studio](https://velvet-bloom-studio.vercel.app/), deployed on Vercel from this repository's main branch. The designer portfolio link is intentionally deferred.
 
 The application is in the inner `velvet-bloom-studio/` directory, next to its `package.json`.
 
