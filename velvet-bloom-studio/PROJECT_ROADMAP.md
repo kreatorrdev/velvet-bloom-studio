@@ -60,28 +60,28 @@ Rezervna kopija pre integracije: `work/backup-before-integration-20261018/` (ign
 - Budući portfolio link nije prisutan dok je URL null.
 - Ranije provereni gallery Tab/Shift+Tab, strelice, Escape, povratak fokusa, mobilni meni, FAQ, privacy i 404 ostaju implementirani.
 
-Lokalne provere su pokrenute sa instaliranim Node.js 26.5.0. CI na Node.js 24 nije još izvršen na GitHub-u. Nije izvršen potpuni audit sa čitačem ekrana ili na svim fizičkim uređajima. Pravi italic font i dodatna optimizacija fotografija mogu biti naknadne dorade.
+Lokalne provere su pokrenute sa instaliranim Node.js 26.5.0. GitHub CI na Node.js 24 je PROŠAO: lint, TypeScript i produkcioni build. Provera: https://github.com/kreatorrdev/velvet-bloom-studio/actions/runs/39153440841 . Nije izvršen potpuni audit sa čitačem ekrana ili na svim fizičkim uređajima. Pravi italic font i dodatna optimizacija fotografija mogu biti naknadne dorade.
 
 ## Povezivanje naloga — poslednje potvrđeno stanje
 
 | Stavka | Status |
 | --- | --- |
 | GitHub dodatak / nalog | POVEZANO; potvrđen kreatorrdev |
-| GitHub repozitorijum za projekat | Još nije pronađen niti kreiran |
-| Lokalni Git remote | Nije podešen |
-| Lokalni commit i push | Nisu izvršeni |
+| GitHub repozitorijum za projekat | KREIRAN I POPUNJEN — privatni https://github.com/kreatorrdev/velvet-bloom-studio |
+| Lokalni Git remote | POVEZAN — origin pokazuje na privatni GitHub repozitorijum |
+| Lokalna i udaljena istorija | SINHRONIZOVANO — main prati origin/main; izvorni fajlovi su na GitHub-u |
 | Vercel dodatak | Nije instaliran / povezivanje nije potvrđeno |
-| Vercel projekat i javni URL | Nisu kreirani; sajt nije objavljen |
+| Vercel projekat i javni URL | Nisu kreirani; potrebna je Vercel prijava/povezivanje, zatim objava |
 
-GitHub konektor radi. Postojeća CLI prijava nije potvrđena kao validna; to ne poništava potvrđeno povezivanje preko konektora. Vercel status treba ponovo proveriti nakon korisničkog povezivanja.
+GitHub konektor radi i izvorni fajlovi su poslati preko njega. Lokalna istorija je usklađena sa tačnim GitHub objektima bez prepisivanja radnih fajlova. Za budući ručni push/fetch iz VS Code terminala treba obnoviti lokalnu GitHub prijavu; ovo ne utiče na povezani konektor. Vercel u otvorenom pregledaču traži prijavu, a njegov dodatak još nije povezan. Status treba ponovo proveriti nakon korisničkog povezivanja.
 
 ## Preostalo — redosled objave
 
 | Redosled | Zadatak | Status i uslov završetka |
 | --- | --- | --- |
 | 1 | Završiti Vercel povezivanje | ČEKA KORISNIČKO POVEZIVANJE; potvrditi pristup nalogu |
-| 2 | Povezati GitHub repozitorijum | ČEKA; koristiti odgovarajući repo za velvet-bloom-studio, sačuvati samo izvorne fajlove, bez tajni i rezervnih kopija |
-| 3 | Commit/push i udaljene provere | ČEKA REPOZITORIJUM; CI na Node.js 24 treba da prođe |
+| 2 | Povezati GitHub repozitorijum | ZAVRŠENO; privatni kreatorrdev/velvet-bloom-studio, 44 izvorna fajla, bez tajni i rezervnih kopija |
+| 3 | Sačuvati verziju i proveriti je na GitHub-u | ZAVRŠENO; izvorni kod sačuvan i Site checks prošao na Node.js 24 |
 | 4 | Vercel preview | ČEKA POVEZIVANJE; za spoljašnji repo Root Directory je velvet-bloom-studio; npm ci i npm run build |
 | 5 | Proveriti objavljeni URL | ZA POSLE DEPLOY-A; slike, menu, gallery, FAQ, demo fill/preview/reset, privacy i 404 |
 | 6 | Podeliti javni demo URL | ZA POSLE PROVERE; dovoljan je Vercel poddomen, sopstveni domen je opcioni |
@@ -112,3 +112,4 @@ Terminal ostaje otvoren. Iz spoljašnjeg foldera može se pokrenuti i START-LOCA
 - `.github/workflows/ci.yml`: udaljene provere nakon povezivanja repozitorijuma.
 
 Identična kopija plana sačuvana je i u korenu aplikacije, uz njen package.json.
+
