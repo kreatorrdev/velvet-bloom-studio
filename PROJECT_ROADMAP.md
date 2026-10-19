@@ -1,142 +1,149 @@
-# Velvet Bloom Studio — portfolio plan
+# Velvet Bloom Studio — project roadmap
 
-Ažurirano: 19. oktobar 2026.
+Updated: 19 October 2026.
 
-## Potvrđena namena
+## Project scope
 
-**Javni portfolio demo izmišljenog beauty salona.** Stvarne rezervacije, kontakt podaci salona, poslovna adresa, radno vreme, baza i mail servis nisu potrebni za ovu namenu. Nije potrebno izmišljati te podatke.
+**A public portfolio demo for a fictional beauty studio.** Real appointments, salon contact details, a business address, opening hours, a database and an email service are outside this demo's scope. No business details need to be invented.
 
-Budući link ka dizajnerskom portfoliju ostaje odložen prema zahtevu korisnice. U kodu je pripremljeno jedno mesto za njega; interfejs nema prazan ili neaktivan link.
+The future designer portfolio link is intentionally deferred. Its configuration is ready in the code, and the interface does not display an empty or inactive link.
 
-Git koren: `C:\Users\Administrator\Documents\projekti\velvet-bloom-studio`.
-Aplikacija: unutrašnji `velvet-bloom-studio/`, gde je `package.json`.
-Rezervna kopija pre integracije: `work/backup-before-integration-20261018/` (ignorisana u Git-u).
+Repository root: the outer project folder.
+Application: the inner `velvet-bloom-studio/` folder containing `package.json`.
+Pre-integration backup: `work/backup-before-integration-20261018/` (excluded from Git).
 
-## Tehnologije
+## Technology
 
-| Oblast | Rešenje |
+| Area | Implementation |
 | --- | --- |
 | Framework | Next.js 16.4.2 App Router, React 19.3.0 |
-| Jezik | TypeScript 5, strict |
-| Stilovi | Tailwind CSS v4 + custom CSS; Dark Luxury, engleski UI |
-| Fontovi | Lokalni Cormorant Garamond i Inter, WOFF2, next/font/local, OFL licence |
-| Fotografije | Tri lokalna AI enterijera, WebP + next/image; ilustrativni tretmani sa Unsplash-a |
-| Interakcije | React state/context, ručni obilazak prostorija, IntersectionObserver, requestAnimationFrame, native dialog, details/summary |
-| Formular | Isključivo lokalni demo: sample fill, validacija, preview i reset |
-| SEO | Metadata, canonical prema domenu, PNG OG 1200 × 630, SVG ikona, noindex |
-| Provere | ESLint, TypeScript, Next build, generisani HTML, Chrome browser |
-| Objava | Privatni GitHub repo i javni Vercel demo; GitHub Actions provere na Node.js 24 |
+| Language | TypeScript 5, strict mode |
+| Styling | Tailwind CSS v4 and custom CSS; dark luxury design, English UI |
+| Fonts | Local Cormorant Garamond and Inter, WOFF2, next/font/local, OFL licences |
+| Imagery | Three local AI-created interiors, WebP and next/image; illustrative treatment photography from Unsplash |
+| Interactions | React state/context, manual room tour, IntersectionObserver, requestAnimationFrame, native dialog, details/summary |
+| Booking form | Browser-only demo: sample fill, validation, preview and reset |
+| SEO | Metadata, domain-aware canonical URL, 1200 × 630 PNG Open Graph image, SVG icon, noindex |
+| Validation | ESLint, TypeScript, Next.js production build, rendered HTML and Chrome browser checks |
+| Deployment | Private GitHub repository and public Vercel demo; GitHub Actions checks on Node.js 24 |
 
-## Status implementacije
+## Implementation status
 
-| Zadatak | Status |
+| Task | Status |
 | --- | --- |
-| Pregled stvarnih fajlova, rezervna kopija i integracija ZIP-a | ZAVRŠENO |
-| Hero, lokalni fontovi i responsive navbar | ZAVRŠENO |
-| Novi hero sa enterijerom i usklađeni prikazi prostora | ZAVRŠENO — 3 lokalna WebP koncepta, jasno označena kao AI |
-| Sekcija The studio sa tri prostorije, opisima i prev/next kontrolama | ZAVRŠENO — prostorije se menjaju ručno |
-| Blagi zoom, parallax, otkrivanje pri skrolu i indikator napretka | ZAVRŠENO — bez novih biblioteka |
-| Pause/Resume motion i poštovanje prefers-reduced-motion | ZAVRŠENO; sadržaj ostaje vidljiv i bez JavaScripta |
-| Services/pricing, about, proces, gallery, FAQ i footer | ZAVRŠENO |
-| Jasna demo oznaka u hero sekciji, formi, FAQ-u i footer-u | ZAVRŠENO |
-| Ilustrativne cene i izmišljeni utisci jasno označeni | ZAVRŠENO |
-| Uklonjen tekst koji obećava stvarnu lokaciju i podatke budućeg salona | ZAVRŠENO |
-| Povezan izbor tretmana sa kartice u formular | ZAVRŠENO |
-| Fill sample details sa example.com adresom i sutrašnjim datumom | ZAVRŠENO |
-| Clear demo briše sva polja, izbor, saglasnost i poruku | ZAVRŠENO |
-| Uklonjen živi endpoint, fetch, sending/success/error režimi iz forme | ZAVRŠENO — env promenljiva ne može uključiti slanje |
-| Informacije o projektu i privatnosti na /privacy | ZAVRŠENO ZA DEMO |
-| Prilagođena 404 stranica i metadata | ZAVRŠENO |
-| Skip link, labeli, alt tekst, reduced motion, fokus i dostupna galerija | OSNOVNE PROVERE PROŠLE |
-| Budući portfolio URL u projectInfo.portfolioUrl | PRIPREMLJENO; null; link je skriven |
-| Git ignore, CI workflow, .env.example i vercel.json | PRIPREMLJENO |
-| README i ovaj plan usklađeni sa portfolio namenom | ZAVRŠENO |
+| Inspect source files, create a backup and integrate the original archive | COMPLETE |
+| Hero, local fonts and responsive navigation | COMPLETE |
+| Interior hero and consistent studio imagery | COMPLETE — three local WebP concepts, clearly labelled as AI-created |
+| The studio section with three rooms, captions and previous/next controls | COMPLETE — rooms advance manually |
+| Gentle zoom, parallax, scroll reveals and reading progress indicator | COMPLETE — no new libraries |
+| Pause/Resume motion and prefers-reduced-motion support | COMPLETE — content remains visible without JavaScript |
+| Services/pricing, story, experience, gallery, FAQ and footer | COMPLETE |
+| Clear demo disclosure in the hero, form, FAQ and footer | COMPLETE |
+| Illustrative prices and fictional guest reflections labelled clearly | COMPLETE |
+| Remove copy promising a real studio location or future business details | COMPLETE |
+| Populate the form from the selected treatment card | COMPLETE |
+| Fill sample details using an example.com address and tomorrow's date | COMPLETE |
+| Clear demo resets every field, selection, consent checkbox and message | COMPLETE |
+| Remove the live endpoint, fetch and sending/success/error form modes | COMPLETE — environment variables cannot enable submissions |
+| Project and privacy information at /privacy | COMPLETE FOR THE DEMO |
+| Custom 404 page and metadata | COMPLETE |
+| Skip link, labels, alt text, motion preferences, focus and accessible gallery | BASIC CHECKS PASSED |
+| Future portfolio URL in projectInfo.portfolioUrl | READY — null; link remains hidden |
+| Git ignore rules, CI workflow, .env.example and vercel.json | CONFIGURED |
+| README files and roadmap reflect the portfolio scope | COMPLETE |
 
-## Dorada prostora i animacija — 19. oktobar 2026.
+## Studio and motion revision — 19 October 2026
 
-- Lokalni lint i produkcioni build su PROŠLI; TypeScript faza build-a je prošla.
-- Browser provere: tri prostorije, wrap prev/next, Enter, ažuriranje aktivnog izbora, Pause/Resume, stopiranje animacije i uklanjanje skrivenih reveal stanja.
-- Responsive provere na 320, 375, 768 i 1440 px: nema horizontalnog prelivanja. Mobilni meni otvara The studio i zatvara se posle izbora.
-- Otvaranje nove slike u galeriji, Escape, demo fill/preview/clear su prošli.
-- Tri lokalna WebP fajla i /privacy vraćaju 200. Serverski HTML ima sve sadržaje vidljive, bez data-reveal-pending atributa.
-- Fotografski prostor je izmišljen i AI oznake su dodate u turu, galeriju i /privacy. Ukupna veličina tri izvora je 568 KB; Next.js ih dodatno prilagođava veličini prikaza.
-- Izvori: public/images/studio-*.webp; tačni ImageGen promptovi i poreklo: docs/INTERIOR_ASSETS.md u aplikaciji.
-- Smanjeno kretanje implementirano je kroz sistemski media query i SSR bez animacija; ručno pauziranje je provereno. Nije izvršen zaseban test promene sistemskog podešavanja uređaja.
-- Objava koristi postojeću GitHub main → Vercel vezu i isti javni domen.
+- Local lint and the production build PASSED, including the build's TypeScript phase.
+- Browser checks covered all three rooms, previous/next wrapping, Enter activation, active selection, Pause/Resume, paused animations and removal of pending reveal states.
+- Responsive checks at 320, 375, 768 and 1440 px showed no horizontal overflow. The mobile menu opens The studio and closes after selection.
+- Opening a new gallery image, Escape and demo fill/preview/clear checks passed.
+- The three local WebP images and /privacy returned 200. Server-rendered HTML kept all content visible without data-reveal-pending attributes.
+- Interior views are fictional. AI disclosures appear in the room tour, gallery and /privacy. The three source images total 568 KB; Next.js also resizes them for delivery.
+- Assets: public/images/studio-*.webp. Exact ImageGen prompts and provenance: docs/INTERIOR_ASSETS.md in the application.
+- Reduced motion uses the system media query and server rendering without animations. Manual pause was verified; changing the operating system preference was not separately tested.
+- [GitHub Site checks passed on Node.js 24](https://github.com/kreatorrdev/velvet-bloom-studio/actions/runs/39222504417).
+- Vercel completed deployment through the existing GitHub main integration. The public site and all three interior images returned 200; room selection and active image animation were verified.
 
-## Provere prve verzije — 18. oktobar 2026.
+## Initial version checks — 18 October 2026
 
-- `npm.cmd run lint`: PROŠLO, bez grešaka i upozorenja.
-- `npm.cmd run typecheck`: PROŠLO.
-- `npm.cmd run build`: PROŠLO; statične stranice i Open Graph PNG.
-- Generisani HTML: jedan H1, 22 jedinstvena ID-a, 31 ispravan interni anchor link, 10 slika sa alt atributom, noindex, demo oznaka i /privacy.
-- Open Graph: PNG 1200 × 630.
-- Browser: izbor The Velvet Ritual postavlja body-ritual; popunjavanje primerom zadržava izabrani tretman; preview saopštava da ništa nije poslato, sačuvano ili rezervisano; Clear demo prazni sva polja i status.
-- Responsive: 320, 375, 768 i 1440 px bez horizontalnog prelivanja u novoj portfolio verziji.
-- Budući portfolio link nije prisutan dok je URL null.
-- Ranije provereni gallery Tab/Shift+Tab, strelice, Escape, povratak fokusa, mobilni meni, FAQ, privacy i 404 ostaju implementirani.
+- `npm.cmd run lint`: PASSED without errors or warnings.
+- `npm.cmd run typecheck`: PASSED.
+- `npm.cmd run build`: PASSED; static pages and Open Graph PNG generated.
+- Rendered HTML: one H1, 22 unique IDs, 31 valid internal anchor links, 10 images with alt attributes, noindex, demo disclosure and /privacy.
+- Open Graph image: PNG, 1200 × 630.
+- Selecting The Velvet Ritual sets body-ritual. Sample fill preserves the selected treatment. Preview reports that nothing was sent, saved or booked. Clear demo resets every field and the status.
+- Responsive checks at 320, 375, 768 and 1440 px showed no horizontal overflow.
+- The future portfolio link is absent while its URL is null.
+- Gallery Tab/Shift+Tab, arrow keys, Escape, focus restoration, mobile navigation, FAQ, privacy and custom 404 checks passed.
 
-Lokalne provere su pokrenute sa instaliranim Node.js 26.5.0. GitHub CI na Node.js 24 je PROŠAO: lint, TypeScript i produkcioni build. Provera: https://github.com/kreatorrdev/velvet-bloom-studio/actions/runs/39153440841 . Nije izvršen potpuni audit sa čitačem ekrana ili na svim fizičkim uređajima. Pravi italic font i dodatna optimizacija fotografija mogu biti naknadne dorade.
+Local checks used Node.js 26.5.0. The [initial GitHub CI run on Node.js 24](https://github.com/kreatorrdev/velvet-bloom-studio/actions/runs/39153440841) passed lint, TypeScript and the production build. A complete screen-reader or physical-device audit has not been performed. A dedicated italic font face and further image optimisation remain optional refinements.
 
-## Povezivanje naloga — poslednje potvrđeno stanje
+## Repository and deployment status
 
-| Stavka | Status |
+| Item | Status |
 | --- | --- |
-| GitHub dodatak / nalog | POVEZANO; potvrđen kreatorrdev |
-| GitHub repozitorijum za projekat | KREIRAN I POPUNJEN — privatni https://github.com/kreatorrdev/velvet-bloom-studio |
-| Lokalni Git remote | POVEZAN — origin pokazuje na privatni GitHub repozitorijum |
-| Lokalna i udaljena istorija | SINHRONIZOVANO — main prati origin/main; izvorni fajlovi su na GitHub-u |
-| Vercel nalog i GitHub integracija | POVEZANO; potvrđen projekat kreatorrdev/velvet-bloom-studio i izvor main |
-| Vercel projekat i javni URL | OBJAVLJENO — https://velvet-bloom-studio.vercel.app/; Production Ready |
-| Vercel dodatak za ovaj razgovor | Nije instaliran; nije potreban za postojeću objavu i GitHub integraciju |
+| GitHub connector/account | CONNECTED — kreatorrdev confirmed |
+| Project repository | CREATED AND POPULATED — private [kreatorrdev/velvet-bloom-studio](https://github.com/kreatorrdev/velvet-bloom-studio) |
+| Local Git remote | CONNECTED — origin points to the private GitHub repository |
+| Local and remote history | SYNCHRONISED — main tracks origin/main; source files are on GitHub |
+| Vercel account and GitHub integration | CONNECTED — kreatorrdev/velvet-bloom-studio, source branch main |
+| Vercel project and public URL | DEPLOYED — [velvet-bloom-studio.vercel.app](https://velvet-bloom-studio.vercel.app/); Production Ready |
+| Optional Vercel conversation connector | Not installed; not required for the existing deployment or GitHub integration |
 
-GitHub konektor radi i izvorni fajlovi su poslati preko njega. Lokalna istorija je usklađena sa tačnim GitHub objektima bez prepisivanja radnih fajlova. Za budući ručni push/fetch iz VS Code terminala treba obnoviti lokalnu GitHub prijavu; ovo ne utiče na povezani konektor. Vercel nalog u Chrome-u je prijavljen, a produkcioni projekat povezan je sa ovim repozitorijumom. Sačuvane promene na main grani pokreću narednu Vercel objavu.
+Source changes are published through the connected GitHub connector. Local history mirrors the exact GitHub commits without overwriting working files. Future manual push/fetch operations from a local terminal require refreshing that terminal's separate GitHub login; this does not affect the connected connector. Vercel deploys updates pushed to main.
 
-## Provera javnog sajta — 18. oktobar 2026.
+## Initial public site checks — 18 October 2026
 
-- https://velvet-bloom-studio.vercel.app/ vraća 200 i prikazuje portfolio demo.
-- Vercel prikazuje Production Ready, GitHub main i ispravan unutrašnji folder aplikacije.
-- /privacy, /robots.txt, /opengraph-image i /icon.svg vraćaju 200; nepostojeća stranica vraća 404.
-- Canonical koristi stvarni javni domen; noindex, nofollow ostaje nameran za demo.
-- Sve učitane fotografije prikazane su bez greške. Galerija se otvara i zatvara tasterom Escape; FAQ se otvara.
-- Demo fill, preview i clear rade i na javnom sajtu; nijedan unos se ne šalje ili rezerviše.
-- Mobilni meni se otvara i zatvara tasterom Escape; na 375 px nema horizontalnog prelivanja.
+- The public homepage returned 200 and displayed the portfolio demo.
+- Vercel showed Production Ready, GitHub main and the correct inner application directory.
+- /privacy, /robots.txt, /opengraph-image and /icon.svg returned 200; an unknown page returned 404.
+- Canonical metadata used the public domain. The demo intentionally kept noindex, nofollow.
+- All loaded images displayed correctly. The gallery opened and closed with Escape; FAQ items expanded.
+- Demo fill, preview and clear worked on the public site; nothing was submitted or booked.
+- The mobile menu opened and closed with Escape; there was no horizontal overflow at 375 px.
 
-## Preostalo — redosled objave
+## Delivery sequence and remaining work
 
-| Redosled | Zadatak | Status i uslov završetka |
+| Order | Task | Status and completion criteria |
 | --- | --- | --- |
-| 1 | Završiti Vercel povezivanje | ZAVRŠENO; nalog i produkcioni projekat dostupni |
-| 2 | Povezati GitHub repozitorijum | ZAVRŠENO; privatni kreatorrdev/velvet-bloom-studio, bez tajni i rezervnih kopija |
-| 3 | Sačuvati verziju i proveriti je na GitHub-u | ZAVRŠENO; izvorni kod sačuvan i Site checks prošao na Node.js 24 |
-| 4 | Vercel objava | ZAVRŠENO; Production Ready; aplikacija u velvet-bloom-studio folderu |
-| 5 | Proveriti objavljeni URL | ZAVRŠENO; slike, mobilni meni, galerija, FAQ, demo fill/preview/reset, privacy i 404 |
-| 6 | Podeliti javni demo URL | ZAVRŠENO; https://velvet-bloom-studio.vercel.app/; sopstveni domen je opcioni |
-| Kasnije | Napraviti lični portfolio i dodati njegov link | NAMERNO ODLOŽENO; ne blokira demo objavu |
+| 1 | Complete Vercel connection | COMPLETE — account and production project accessible |
+| 2 | Connect the GitHub repository | COMPLETE — private kreatorrdev/velvet-bloom-studio; no secrets or backups committed |
+| 3 | Save and validate the source on GitHub | COMPLETE — source committed; Site checks passed on Node.js 24 |
+| 4 | Deploy to Vercel | COMPLETE — Production Ready; application root is velvet-bloom-studio |
+| 5 | Verify the public URL | COMPLETE — images, mobile navigation, gallery, FAQ, demo fill/preview/reset, privacy and 404 |
+| 6 | Share the public demo URL | COMPLETE — https://velvet-bloom-studio.vercel.app/; a custom domain is optional |
+| Later | Build the designer portfolio and add its link | INTENTIONALLY DEFERRED — does not block this demo |
 
-Za ovaj portfolio demo **ne čekamo** podatke stvarnog salona, stvarne recenzije ili booking servis. Pravo zakazivanje zahteva novu, zasebnu odluku i implementaciju.
+This portfolio demo does not require real salon details, authentic customer reviews or a booking service. Real appointments would require a separate scope decision and implementation.
 
-## Pokretanje
+## Run locally
 
-Ako server već radi, samo otvoriti `http://localhost:3000` ili `http://127.0.0.1:3000`.
-Za naredno pokretanje iz normalnog VS Code terminala:
+If the development server is already running, open `http://localhost:3000` or `http://127.0.0.1:3000`.
+
+From the repository root, start the application in a normal terminal:
 
 ```powershell
-cd "C:\Users\Administrator\Documents\projekti\velvet-bloom-studio\velvet-bloom-studio"
+cd velvet-bloom-studio
 npm.cmd run dev -- --port 3000
 ```
 
-Terminal ostaje otvoren. Iz spoljašnjeg foldera može se pokrenuti i START-LOCALHOST.cmd.
+Keep the terminal open. On Windows, START-LOCALHOST.cmd in the repository root is also available. After a fresh clone, install dependencies with `npm.cmd ci` from the application folder.
 
-## Gde se šta menja
+## File guide
 
-- `velvet-bloom-studio/src/data/site.ts`: tretmani, cene, FAQ, slike i projectInfo.portfolioUrl.
-- `velvet-bloom-studio/src/app/page.tsx`: sekcije i tekstovi.
-- `velvet-bloom-studio/src/app/globals.css`: izgled i responsive ponašanje.
-- `velvet-bloom-studio/src/components/BookingForm.tsx`: isključivo lokalni demo formular.
-- `velvet-bloom-studio/.env.example`: samo opcioni javni SITE_URL, bez booking endpointa.
-- `velvet-bloom-studio/README.md`: pokretanje, tehnologije i Vercel podešavanja.
-- `.github/workflows/ci.yml`: udaljene provere nakon povezivanja repozitorijuma.
+Paths below are relative to the repository root.
 
-Identična kopija plana sačuvana je i u korenu aplikacije, uz njen package.json.
+- `velvet-bloom-studio/src/data/site.ts`: treatments, prices, FAQ, images, studio spaces and projectInfo.portfolioUrl.
+- `velvet-bloom-studio/src/app/page.tsx`: page sections and copy.
+- `velvet-bloom-studio/src/app/globals.css`: appearance, responsive styles and animation.
+- `velvet-bloom-studio/src/components/StudioTour.tsx`: room selection and captions.
+- `velvet-bloom-studio/src/components/SiteMotion.tsx`: motion preferences, pause control, reveals and parallax.
+- `velvet-bloom-studio/src/components/BookingForm.tsx`: browser-only booking demo.
+- `velvet-bloom-studio/.env.example`: optional public SITE_URL; no booking endpoint.
+- `velvet-bloom-studio/README.md`: setup, technology and Vercel settings.
+- `velvet-bloom-studio/docs/INTERIOR_ASSETS.md`: interior image provenance and prompts.
+- `.github/workflows/ci.yml`: remote checks for source changes.
+
+An identical copy of this roadmap is stored in the application folder beside package.json.
 

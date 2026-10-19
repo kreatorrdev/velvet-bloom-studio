@@ -1,5 +1,7 @@
-# Velvet Bloom Studio — integrisani sajt
+# Velvet Bloom Studio — integrated website
 
-Fajlovi iz ZIP-a već su primenjeni u ovaj projekat. Pratite [README.md](README.md) za pokretanje, povezivanje forme i GitHub/Vercel podešavanja.
+The original archive has already been integrated into this project. See [README.md](README.md) for local setup, the booking demo and GitHub/Vercel deployment settings.
 
-Statusi, potvrđene provere i preostali zadaci: [PROJECT_ROADMAP.md](PROJECT_ROADMAP.md).
+The booking form is a browser-only demonstration. It does not send messages, store entries or create appointments.
+
+Implementation status, verified checks and remaining work: [PROJECT_ROADMAP.md](PROJECT_ROADMAP.md).

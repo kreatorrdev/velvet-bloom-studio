@@ -80,7 +80,7 @@ Fonts are local and do not require Google Fonts requests during build. The cache
 
 The outer folder is the Git root on `main`. Its `.github/workflows/ci.yml` installs the lockfile, runs lint, builds and checks TypeScript on Node.js 24. Backups, QA output, `.env.local`, `node_modules`, `.next` and `.vercel` are ignored. `.env.example` is included.
 
-Source is saved in the private [kreatorrdev/velvet-bloom-studio repository](https://github.com/kreatorrdev/velvet-bloom-studio). Local main tracks origin/main and mirrors the same history. [GitHub Site checks](https://github.com/kreatorrdev/velvet-bloom-studio/actions/runs/39153440841) passed on Node.js 24. The connected GitHub app can publish changes; a future manual push/fetch from the local terminal requires refreshing its separate GitHub login. The [Vercel project](https://vercel.com/kreatorrdev/velvet-bloom-studio) is connected to GitHub main and its production deployment is Ready. Saving changes to main triggers another deployment.
+Source is saved in the private [kreatorrdev/velvet-bloom-studio repository](https://github.com/kreatorrdev/velvet-bloom-studio). Local main tracks origin/main and mirrors the same history. [GitHub Site checks](https://github.com/kreatorrdev/velvet-bloom-studio/actions/runs/39222504417) passed on Node.js 24. The connected GitHub app can publish changes; a future manual push/fetch from the local terminal requires refreshing its separate GitHub login. The [Vercel project](https://vercel.com/kreatorrdev/velvet-bloom-studio) is connected to GitHub main and its production deployment is Ready. Saving changes to main triggers another deployment.
 
 For a Vercel project using the outer repository:
 
