@@ -7,6 +7,7 @@ const links = [
   { label: "Home", href: "#home" },
   { label: "Treatments", href: "#services" },
   { label: "Our story", href: "#about" },
+  { label: "The studio", href: "#studio" },
   { label: "Gallery", href: "#gallery" },
   { label: "Booking demo", href: "#contact" },
 ];

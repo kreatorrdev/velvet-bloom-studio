@@ -29,7 +29,7 @@ export default function Gallery() {
     <>
       <div className="gallery-grid">
         {gallery.map((item, index) => (
-          <button className={`gallery-tile gallery-tile-${index + 1}`} key={item.label} type="button"
+          <button className={`gallery-tile gallery-tile-${index + 1}`} key={item.label} type="button" data-reveal
             onClick={(event) => openGallery(index, event.currentTarget)}
             aria-label={`View photo: ${item.label}`} aria-haspopup="dialog">
             <Image src={item.image} alt={item.alt} fill sizes="(max-width: 720px) 100vw, (max-width: 1060px) 50vw, 33vw" unoptimized />

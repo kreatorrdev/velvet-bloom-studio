@@ -6,6 +6,8 @@ Source repository: [kreatorrdev/velvet-bloom-studio](https://github.com/kreatorr
 [Site checks passed on Node.js 24](https://github.com/kreatorrdev/velvet-bloom-studio/actions/runs/39153440841).
 Live demo: [Velvet Bloom Studio](https://velvet-bloom-studio.vercel.app/), deployed on Vercel from this repository's main branch. The designer portfolio link is intentionally deferred.
 
+The studio presentation includes three original AI-created interior concepts, a manually controlled room tour, gentle image movement and scroll reveals. Pause motion and the device reduced-motion preference keep the experience accessible.
+
 The application is in the inner `velvet-bloom-studio/` directory, next to its `package.json`.
 
 ```powershell

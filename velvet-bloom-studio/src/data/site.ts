@@ -13,6 +13,12 @@ export type Service = {
 // An empty value intentionally renders no placeholder or inactive link.
 export const projectInfo: { portfolioUrl: string | null } = { portfolioUrl: null };
 
+export const studioSpaces = [
+  { id: "welcome", label: "The welcome", title: "A softer arrival.", description: "Warm textures, gentle light and a little room to leave the day behind.", image: "/images/studio-reception.webp", alt: "Imagined reception with a curved stone desk, cream sofa and rose velvet chair" },
+  { id: "treatment", label: "The treatment room", title: "Time, entirely yours.", description: "A quiet treatment room, softened by linen, oak and afternoon light.", image: "/images/studio-treatment.webp", alt: "Imagined private treatment room with an ivory spa bed, oak cabinetry and soft linen curtains" },
+  { id: "lounge", label: "The quiet corner", title: "Stay a little longer.", description: "A sunlit corner for tea, a slow breath and the simple pleasure of pausing.", image: "/images/studio-lounge.webp", alt: "Imagined relaxation lounge with two rose velvet chairs beside a softly curtained window" },
+];
+
 export const services: Service[] = [
   {
     id: "signature-facial",
@@ -47,10 +53,10 @@ export const services: Service[] = [
 ];
 
 export const gallery = [
-  { image: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1200&q=85", alt: "Elegant indoor spa and pool", label: "A quieter kind of luxury" },
+  { image: studioSpaces[0].image, alt: studioSpaces[0].alt, label: "A quieter kind of luxury" },
   { image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=85", alt: "Facial skincare and wellness treatment", label: "Care in every detail" },
-  { image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=85", alt: "Spa towels, a skincare bottle and pink flowers", label: "Room to unwind" },
-  { image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=900&q=85", alt: "Curated skincare and treatment elements", label: "The beauty of ritual" },
+  { image: studioSpaces[2].image, alt: studioSpaces[2].alt, label: "Room to unwind" },
+  { image: studioSpaces[1].image, alt: studioSpaces[1].alt, label: "The beauty of ritual" },
 ];
 
 export const faqs = [

@@ -1,6 +1,6 @@
 # Velvet Bloom Studio — portfolio plan
 
-Ažurirano: 18. oktobar 2026.
+Ažurirano: 19. oktobar 2026.
 
 ## Potvrđena namena
 
@@ -20,8 +20,8 @@ Rezervna kopija pre integracije: `work/backup-before-integration-20261018/` (ign
 | Jezik | TypeScript 5, strict |
 | Stilovi | Tailwind CSS v4 + custom CSS; Dark Luxury, engleski UI |
 | Fontovi | Lokalni Cormorant Garamond i Inter, WOFF2, next/font/local, OFL licence |
-| Fotografije | next/image + spoljašnji Unsplash URL-ovi |
-| Interakcije | React state/context, native dialog, details/summary |
+| Fotografije | Tri lokalna AI enterijera, WebP + next/image; ilustrativni tretmani sa Unsplash-a |
+| Interakcije | React state/context, ručni obilazak prostorija, IntersectionObserver, requestAnimationFrame, native dialog, details/summary |
 | Formular | Isključivo lokalni demo: sample fill, validacija, preview i reset |
 | SEO | Metadata, canonical prema domenu, PNG OG 1200 × 630, SVG ikona, noindex |
 | Provere | ESLint, TypeScript, Next build, generisani HTML, Chrome browser |
@@ -33,6 +33,10 @@ Rezervna kopija pre integracije: `work/backup-before-integration-20261018/` (ign
 | --- | --- |
 | Pregled stvarnih fajlova, rezervna kopija i integracija ZIP-a | ZAVRŠENO |
 | Hero, lokalni fontovi i responsive navbar | ZAVRŠENO |
+| Novi hero sa enterijerom i usklađeni prikazi prostora | ZAVRŠENO — 3 lokalna WebP koncepta, jasno označena kao AI |
+| Sekcija The studio sa tri prostorije, opisima i prev/next kontrolama | ZAVRŠENO — prostorije se menjaju ručno |
+| Blagi zoom, parallax, otkrivanje pri skrolu i indikator napretka | ZAVRŠENO — bez novih biblioteka |
+| Pause/Resume motion i poštovanje prefers-reduced-motion | ZAVRŠENO; sadržaj ostaje vidljiv i bez JavaScripta |
 | Services/pricing, about, proces, gallery, FAQ i footer | ZAVRŠENO |
 | Jasna demo oznaka u hero sekciji, formi, FAQ-u i footer-u | ZAVRŠENO |
 | Ilustrativne cene i izmišljeni utisci jasno označeni | ZAVRŠENO |
@@ -48,7 +52,19 @@ Rezervna kopija pre integracije: `work/backup-before-integration-20261018/` (ign
 | Git ignore, CI workflow, .env.example i vercel.json | PRIPREMLJENO |
 | README i ovaj plan usklađeni sa portfolio namenom | ZAVRŠENO |
 
-## Završne provere
+## Dorada prostora i animacija — 19. oktobar 2026.
+
+- Lokalni lint i produkcioni build su PROŠLI; TypeScript faza build-a je prošla.
+- Browser provere: tri prostorije, wrap prev/next, Enter, ažuriranje aktivnog izbora, Pause/Resume, stopiranje animacije i uklanjanje skrivenih reveal stanja.
+- Responsive provere na 320, 375, 768 i 1440 px: nema horizontalnog prelivanja. Mobilni meni otvara The studio i zatvara se posle izbora.
+- Otvaranje nove slike u galeriji, Escape, demo fill/preview/clear su prošli.
+- Tri lokalna WebP fajla i /privacy vraćaju 200. Serverski HTML ima sve sadržaje vidljive, bez data-reveal-pending atributa.
+- Fotografski prostor je izmišljen i AI oznake su dodate u turu, galeriju i /privacy. Ukupna veličina tri izvora je 568 KB; Next.js ih dodatno prilagođava veličini prikaza.
+- Izvori: public/images/studio-*.webp; tačni ImageGen promptovi i poreklo: docs/INTERIOR_ASSETS.md u aplikaciji.
+- Smanjeno kretanje implementirano je kroz sistemski media query i SSR bez animacija; ručno pauziranje je provereno. Nije izvršen zaseban test promene sistemskog podešavanja uređaja.
+- Objava koristi postojeću GitHub main → Vercel vezu i isti javni domen.
+
+## Provere prve verzije — 18. oktobar 2026.
 
 - `npm.cmd run lint`: PROŠLO, bez grešaka i upozorenja.
 - `npm.cmd run typecheck`: PROŠLO.
@@ -91,7 +107,7 @@ GitHub konektor radi i izvorni fajlovi su poslati preko njega. Lokalna istorija 
 | Redosled | Zadatak | Status i uslov završetka |
 | --- | --- | --- |
 | 1 | Završiti Vercel povezivanje | ZAVRŠENO; nalog i produkcioni projekat dostupni |
-| 2 | Povezati GitHub repozitorijum | ZAVRŠENO; privatni kreatorrdev/velvet-bloom-studio, 44 izvorna fajla, bez tajni i rezervnih kopija |
+| 2 | Povezati GitHub repozitorijum | ZAVRŠENO; privatni kreatorrdev/velvet-bloom-studio, bez tajni i rezervnih kopija |
 | 3 | Sačuvati verziju i proveriti je na GitHub-u | ZAVRŠENO; izvorni kod sačuvan i Site checks prošao na Node.js 24 |
 | 4 | Vercel objava | ZAVRŠENO; Production Ready; aplikacija u velvet-bloom-studio folderu |
 | 5 | Proveriti objavljeni URL | ZAVRŠENO; slike, mobilni meni, galerija, FAQ, demo fill/preview/reset, privacy i 404 |

@@ -34,6 +34,17 @@ npm.cmd run start
 - `/privacy` explains the demo, sample content, fonts and external images. A real business privacy policy is not presented for a fictional salon.
 - No analytics or marketing cookies are added by this application. Hosting and external image providers may process technical requests.
 
+## Explore the studio and motion
+
+**Discover the studio** opens a three-room interior presentation: the welcome, the treatment room and the quiet corner. Use the room buttons or previous/next arrows; rooms never advance automatically. The hero, story and gallery use the same original AI-created fictional interiors. Treatment images remain illustrative Unsplash photography.
+
+**Pause motion** stops the slow image drift, parallax and scroll reveals; **Resume motion** restores them. The page follows `prefers-reduced-motion`, uses passive scroll handling with one scheduled animation frame, and keeps all content visible if JavaScript or IntersectionObserver is unavailable. Keyboard users can operate every room control and the existing gallery.
+
+- `src/components/SiteMotion.tsx`: motion preference, pause control, scroll progress, reveal observer and bounded parallax.
+- `src/components/StudioTour.tsx`: three manually selected room views, captions and keyboard-operable controls.
+- `public/images/studio-*.webp`: three local 1672 × 941 images, 568 KB combined before Next.js delivery resizing.
+- `docs/INTERIOR_ASSETS.md`: built-in ImageGen provenance and the exact prompts for all three images.
+
 ## Future designer portfolio link
 
 The link is deliberately hidden until the designer portfolio is built. There is no inactive placeholder in the interface.
@@ -63,7 +74,7 @@ Next.js 16.4.2 App Router, React 19.3.0, TypeScript 5, Tailwind CSS v4 and custo
 
 Standard scripts use Webpack because Turbopack path handling failed in the restricted Windows environment. The installed Tailwind loader extends Next’s CSS pipeline. Static generation is sequential to avoid the observed Windows file creation issue. Optional `dev:turbo` and `build:turbo` scripts are retained but unverified here.
 
-Fonts are local and do not require Google Fonts requests during build. The cached upright Cormorant face is included; italic text uses browser synthesis. Photography uses external Unsplash URLs for visual direction and needs internet access. Images do not depict a real Velvet Bloom location.
+Fonts are local and do not require Google Fonts requests during build. The cached upright Cormorant face is included; italic text uses browser synthesis. The interior concepts are local WebP assets delivered with Next.js image resizing. Treatment photography uses external Unsplash URLs for visual direction and needs internet access. Images do not depict a real Velvet Bloom location.
 
 ## GitHub / Vercel deployment
 
@@ -97,6 +108,8 @@ On 18 October 2026, the portfolio revision passed lint, TypeScript and productio
 The earlier version also passed gallery keyboard/focus, mobile menu, FAQ, privacy and custom 404 checks; those behaviours are retained. This is not a complete screen-reader or physical-device audit. Remote CI has passed on Node.js 24.
 
 The public Vercel site was verified on 18 October 2026: homepage, privacy, robots, share image and icon returned 200; an unknown route returned 404. Canonical uses the live domain and the demo remains noindex. Images loaded, gallery and FAQ worked, sample fill/preview/reset passed, and the mobile menu opened and closed with Escape without horizontal overflow at 375 px.
+
+On 19 October 2026 the interior and motion revision passed local lint, production build and its TypeScript phase. Chrome checks covered room selection and wrapping, keyboard activation, pause/resume, the mobile navigation, gallery Escape and demo fill/preview/reset. Widths 320, 375, 768 and 1440 px had no horizontal overflow. Local images returned 200, and server HTML kept every reveal visible without JavaScript. System reduced-motion support is implemented; changing the operating system preference was not separately emulated in this browser session.
 
 Project status and remaining work: `PROJECT_ROADMAP.md` (also in the outer Git root).
 

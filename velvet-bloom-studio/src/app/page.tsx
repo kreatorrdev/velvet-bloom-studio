@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Gallery from "../components/Gallery";
+import SiteMotion from "../components/SiteMotion";
+import StudioTour from "../components/StudioTour";
 import BookingForm from "../components/BookingForm";
 import { BookingProvider, TreatmentLink } from "../components/BookingContext";
 import { ArrowIcon, ArrowUpRightIcon, SparkleIcon } from "../components/Icons";
@@ -11,13 +13,13 @@ const copyrightYear = new Date().getFullYear();
 
 export default function Home() {
   return (
-    <BookingProvider>
+    <BookingProvider><SiteMotion>
       <a className="skip-link" href="#main">Skip to content</a>
       <Navbar />
       <main id="main">
         <section className="hero" id="home" aria-labelledby="hero-title">
-          <div className="hero-visual" aria-hidden="true">
-            <Image src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1900&q=90" alt="" fill priority unoptimized sizes="(max-width: 780px) 100vw, 60vw" />
+          <div className="hero-visual" aria-hidden="true" data-parallax="35">
+            <Image src="/images/studio-reception.webp" alt="" fill priority sizes="100vw" />
           </div>
           <div className="hero-shade" />
           <div className="hero-content container-wide">
@@ -27,12 +29,12 @@ export default function Home() {
               <p className="hero-description">An intimate sanctuary for the art of slowing down. Thoughtful treatments, exquisite details, and time that belongs entirely to you.</p>
               <div className="hero-actions">
                 <a className="button button-gold" href="#services">Explore our rituals <ArrowUpRightIcon size={17}/></a>
-                <a className="text-link" href="#about">Discover the studio <ArrowIcon size={16}/></a>
+                <a className="text-link" href="#studio">Discover the studio <ArrowIcon size={16}/></a>
               </div>
               <p className="hero-demo-note">Fictional beauty studio · Interactive portfolio demo</p>
             </div>
           </div>
-          <div className="hero-index" aria-hidden="true"><span>01 / 04</span><span className="hero-index-line"/><span>THE ART OF SELF-CARE</span></div>
+          <a className="hero-space-note" href="#studio"><span>THE WELCOME · AN IMAGINED SPACE</span><span>A little room to <em>exhale.</em> <ArrowUpRightIcon size={18}/></span></a>
           <a className="hero-scroll" href="#intro" aria-label="Scroll to discover">SCROLL TO DISCOVER <span className="scroll-line"/></a>
         </section>
 
@@ -46,13 +48,13 @@ export default function Home() {
 
         <section className="section services-section" id="services" aria-labelledby="services-heading">
           <div className="container-wide">
-            <div className="section-heading section-heading-split">
+            <div className="section-heading section-heading-split" data-reveal>
               <div><p className="eyebrow gold-line">THE VELVET COLLECTION</p><h2 id="services-heading">Beautifully curated.<br/><em>Just for you.</em></h2></div>
               <p className="section-intro">Each ritual is an invitation to pause — designed with intention, delivered with care, and entirely devoted to your well-being.</p>
             </div>
             <div className="service-grid">
               {services.map((service, index) => (
-                <article className="service-card" key={service.id}>
+                <article className="service-card" key={service.id} data-reveal>
                   <TreatmentLink serviceId={service.id} className="service-photo" aria-label={`Preview booking for ${service.title}`}>
                     <Image src={service.image} alt={service.imageAlt} fill sizes="(max-width: 750px) 100vw, (max-width: 1100px) 50vw, 33vw" unoptimized />
                     <span className="service-image-index">0{index + 1}</span>
@@ -73,12 +75,12 @@ export default function Home() {
 
         <section className="section about-section" id="about" aria-labelledby="about-heading">
           <div className="about-layout container-wide">
-            <div className="about-media">
-              <div className="about-photo"><Image src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1100&q=85" alt="Serene spa interior with warm details" fill sizes="(max-width: 900px) 100vw, 50vw" unoptimized /></div>
+            <div className="about-media" data-reveal>
+              <div className="about-photo" data-parallax="22"><Image src="/images/studio-lounge.webp" alt="Imagined studio lounge with rose velvet chairs and warm afternoon light" fill sizes="(max-width: 900px) 100vw, 50vw" /></div>
               <div className="about-photo-outline" aria-hidden="true" />
               <div className="about-stamp" aria-hidden="true"><SparkleIcon size={30}/><span>THE BEAUTY<br/>OF BEING</span></div>
             </div>
-            <div className="about-copy">
+            <div className="about-copy" data-reveal>
               <p className="eyebrow gold-line">OUR PHILOSOPHY</p>
               <h2 id="about-heading">A softer pace.<br/><em>A deeper glow.</em></h2>
               <p className="about-lead">We believe beauty feels different when you make space for it.</p>
@@ -89,18 +91,20 @@ export default function Home() {
           </div>
         </section>
 
+        <StudioTour />
+
         <section className="statement-section" aria-label="Our promise">
           <div className="statement-ornament" aria-hidden="true">✳</div>
           <p className="eyebrow">OUR PROMISE</p>
-          <p className="statement-quote">Because the most beautiful thing<br/>you can be is <em>at ease.</em></p>
+          <p className="statement-quote" data-reveal>Because the most beautiful thing<br/>you can be is <em>at ease.</em></p>
           <span className="statement-rule"/>
         </section>
 
         <section className="section gallery-section" id="gallery" aria-labelledby="gallery-heading">
           <div className="container-wide">
-            <div className="section-heading gallery-heading"><div><p className="eyebrow gold-line">AN INSIDE LOOK</p><h2 id="gallery-heading">Spaces to <em>exhale.</em></h2></div><p>Beauty is in the atmosphere, the details, and the moments between.</p></div>
+            <div className="section-heading gallery-heading" data-reveal><div><p className="eyebrow gold-line">AN INSIDE LOOK</p><h2 id="gallery-heading">Spaces to <em>exhale.</em></h2></div><p>Beauty is in the atmosphere, the details, and the moments between.</p></div>
             <Gallery />
-            <p className="gallery-caption">IMAGERY FOR VISUAL DIRECTION ONLY · PORTFOLIO DEMONSTRATION</p>
+            <p className="gallery-caption">AI-CREATED INTERIORS & ILLUSTRATIVE TREATMENT PHOTOGRAPHY · PORTFOLIO DEMONSTRATION</p>
           </div>
         </section>
 
@@ -138,6 +142,6 @@ export default function Home() {
         <div className="footer-main"><div className="footer-brand"><a className="wordmark" href="#home" aria-label="Velvet Bloom Studio home"><span className="wordmark-primary">Velvet Bloom</span><span className="wordmark-secondary">B E A U T Y&nbsp;&nbsp; S T U D I O</span></a><p>Beauty, in its most intentional form.</p></div><div className="footer-nav"><span>EXPLORE</span><a href="#services">Treatments</a><a href="#about">Our story</a><a href="#gallery">Gallery</a><a href="#faq">FAQs</a></div><div className="footer-nav"><span>THE DEMO</span><a href="#contact">Try the booking demo</a><Link href="/privacy">About this project</Link><p>A fictional brand. A considered experience.</p></div></div>
         <div className="footer-bottom"><span>© {copyrightYear} VELVET BLOOM STUDIO</span><span>FICTIONAL BEAUTY STUDIO · PORTFOLIO CONCEPT</span>{projectInfo.portfolioUrl && <a href={projectInfo.portfolioUrl}>DESIGNER PORTFOLIO ↗</a>}<Link href="/privacy">DEMO & PRIVACY</Link><a href="#home">BACK TO TOP ↑</a></div>
       </div></footer>
-    </BookingProvider>
+    </SiteMotion></BookingProvider>
   );
 }
