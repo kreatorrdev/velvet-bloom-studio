@@ -1,5 +1,8 @@
 # Velvet Bloom Studio — portfolio demo
 
+> Source documentation review — 1 November 2026: the source repository is public. Earlier dated references to private source access describe the previous repository setting. Hosted access, private user data and historical verification retain their documented scope.
+
+
 A fictional beauty and wellness studio website. The English UI presents an original brand concept, illustrative GBP prices, sample guest reflections and a browser-only booking demonstration. It does not represent a real salon.
 
 Live demo: [velvet-bloom-studio.vercel.app](https://velvet-bloom-studio.vercel.app/).
@@ -112,4 +115,3 @@ The public Vercel site was verified on 18 October 2026: homepage, privacy, robot
 On 19 October 2026 the interior and motion revision passed local lint, production build and its TypeScript phase. Chrome checks covered room selection and wrapping, keyboard activation, pause/resume, the mobile navigation, gallery Escape and demo fill/preview/reset. Widths 320, 375, 768 and 1440 px had no horizontal overflow. Local images returned 200, and server HTML kept every reveal visible without JavaScript. System reduced-motion support is implemented; changing the operating system preference was not separately emulated in this browser session.
 
 Project status and remaining work: `PROJECT_ROADMAP.md` (also in the outer Git root).
-
